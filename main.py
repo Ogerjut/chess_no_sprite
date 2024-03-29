@@ -14,8 +14,6 @@ board = array("i", [11, 13, 15, 17, 18, 16, 14, 12,
 step_pawnw = - 8
 step_pawnb = 8
 
-# opération sur le array pour bouger pièces
-
 
 def print_board():
     list_piece = []
@@ -26,32 +24,26 @@ def print_board():
             list_piece.clear()
 
 # connaitre les cases occupées
-
-
 def get_busy():
     for val in range(len(board)):
         if board[val] == 0:
             return False
 
 # connaitre la pièce sur une case
-
-
 def get_piece(val):
     return board[val]
 
+# opération sur le array pour bouger pièces
 # bouger pièce
-
-
 def move(current_pos, new_pos, piece):
     for val in range(len(board)):
         if val == current_pos:
             board[val] = 0
         if val == new_pos:
             board[val] = piece
+            
 
 # cases authorisées, rajouter une condition suivant couleur et conditions suivant types pièces
-
-
 def authorized_move(piece, current_pos):
     list_authorized_tile = []
     if piece == 1:
