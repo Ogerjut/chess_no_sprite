@@ -56,7 +56,6 @@ print("\n")
 # board[3] = 3
 
 authorized_move(1, 48) 
-
 # move(63, 12, 2)
 
 print_board()
